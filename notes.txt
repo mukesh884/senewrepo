@@ -1,0 +1,57 @@
+[9:35 AM] Akshat Gupta (Guest)
+Create a folder 
+
+go inside the folder -> right click and open git bash 1) git init  #start the git  2) git status 3) touch file1 file2 file3 file4    #creating the blank files with name file1 file2 file3 file4 4) git status                       #you will see that file1 file2 file3 and file4 are not staged yet  5) git add .                        #put all the files from working directory to staging area  ....for single file use git add filename 6) git status                       # you will see that files are staged and askign to commit it  (which means you need to put it to the local repo) 7) git config --global user.name"akshat"     #will set the global configuration configuration of git with name akshat. you need to use your name  8) git config --global user.email"akshat@apicletech.com"  #will set global email of git as akshat@apicletech.com. you need to use yuor mail id #onetine process 9) git config --list   #to check if your name and email is configured properly or not   #onetime process 10) git commit -m"my first commit "  #put the files from staging area to local repo  10.1) git log   #check all the commits  10.2) git log --oneline #check all the commits in single line 
+
+#####################################################################use of git diff ################################# 
+
+11) cat >file10 (press enter)
+
+hello world  (press enter)
+
+(press ctrl + d to exit )    #cat command creates a new file with custom content in the file 12) git add file10  13) vi file10  (press enter)
+
+hello world  (it would already be there) 
+
+              (press i)
+
+its an amazing weather
+
+(press escape and :wq) 14) not to see the difference between the file10 which is in staging area and in the working directory git diff file10    #it wil give output at its an amazing weather ....so you will understand that this content is modified later on 
+
+####################TO SEE DIFFERENCE IN FILE IN STAGING AREA AND LOCAL REPO ################################# 15) git add . 16) git commit -m"file10 created" 17) vi file10
+
+hello world
+
+its an amazing weather today is first day of our git learning
+
+(press esc :wq) 18) git add .  19) git diff --staged  o/p
+
+ diff --git a/file10.txt b/file10.txt
+
+index 9979cd2..629a63f 100644
+
+--- a/file10.txt
+
++++ b/file10.txt
+
+@@ -1,2 +1,2 @@
+
+ hello world
+
+-this is git training
+
++this is git training today is first day of our git learning ##############################SETTING UP ALIAS ############################################# 20) git config --global alias.st status    #setting up st as status alias 21) git st    #works same as git status 22) git status 23) git config --global --unset alias.st     #unsetting alais st 24) git st   #you will see now it will not detect st  25) git config --global alias.com 'commit -m' 26) touch file11 27) git add file11 28) git com "checking alias for com"     #you will see the com alias works same as commit -m ###################################CREATING THE GITHUB ACCOUNT ########################## 29) go to github.com and create a github account 30) create a new repository  come back to gitbash 31) git remote add origin <<repo link>> 32) git push -u origin master  
+
+######################################################################################################
+
+##########USE GIT PULL ###################### 
+
+33) go to github repo -> add a file and create a file 34) touch file100 35) git add . 36) git commit -m"created file 100 to check git pull" 37) git push -u origin master     #you will get error ...read that error properly 38) git pull      #it will pull and update your local repo 39) git push -u origin master   #this time it will push the file  
+
+######################################CLONE THE REPOSITORY################################# 
+
+40) create a new folder and open git bash 41) git clone https://github.com/akshu20791/Books #####################################FORK THE REPOSITORY ################################# 43) open the repository https://github.com/akshu20791/Books  on the top right corner u will see the fork option...
+
+fork will create a replica repository in ur repository ##############################################################################################
+
