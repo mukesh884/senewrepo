@@ -53,5 +53,5 @@ index 9979cd2..629a63f 100644
 
 40) create a new folder and open git bash 41) git clone https://github.com/akshu20791/Books #####################################FORK THE REPOSITORY ################################# 43) open the repository https://github.com/akshu20791/Books  on the top right corner u will see the fork option...
 
-fork will create a replica repository in ur repository ##############################################################################################
+fork will create a replica repository in ur repository #######################################################################################
 
